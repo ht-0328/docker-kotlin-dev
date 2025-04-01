@@ -9,6 +9,8 @@ plugins {
     kotlin("plugin.spring") version "2.1.10"
     // CLI アプリケーションを作成するためのプラグイン
     application
+    // 依存ライブラリのソースコードやJavadocをダウンロードするためのプラグイン(https://docs.gradle.org/current/userguide/idea_plugin.html)
+    id("idea")
 }
 
 repositories {
@@ -46,4 +48,19 @@ application {
 // JUnit 5 を使うようにテスト設定
 tasks.named<Test>("test") {
     useJUnitPlatform()
+}
+
+// 依存ライブラリのソースコード（-sources.jar）やJavadocをダウンロードする設定
+idea {
+    module {
+        isDownloadSources = true
+        isDownloadJavadoc = true
+    }
+}
+
+// Kotlin の JVM ターゲットを 17 に設定（Java 17 のバイトコードを出力するようにする）
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }

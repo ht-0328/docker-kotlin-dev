@@ -12,11 +12,16 @@
                 "mathiasfrohlich.Kotlin",
                 "mhutchie.git-graph",
                 "donjayamanne.githistory",
-                "eamodio.gitlens"
+                "eamodio.gitlens",
+                "vscjava.vscode-gradle"
             ],
             "settings": {
-                "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
-                "kotlin.compiler.jvmTarget": "17"
+                "kotlin.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
+                "kotlin.compiler.jvmTarget": "17",
+                // Kotlin Language Server（KLS）を有効にするかどうか
+                "kotlin.languageServer.enabled": true,
+                // Kotlin Language Server（KLS）をデバック起動しないようにする（KLSの開発時に使う設定）
+                "kotlin.languageServer.debugAttach.enabled": false
             }
         }
     },
