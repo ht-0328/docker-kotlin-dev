@@ -79,3 +79,20 @@ git config --global user.name "自身のユーザ名"
 ```sh
 git config --global user.email "自身のメールアドレス"
 ```
+
+# Gradleのコマンド
+
+## IntelliJ IDEA プロジェクトファイルを生成（.ipr, .iml, .idea/...）
+```sh
+./gradlew idea --no-configuration-cache
+```
+
+# VSCodeコマンド
+
+"Ctrl + Shift + P"でコマンドパレット開き、各コマンドを実行する
+
+## Java関連のキャッシュ（設定・構文情報など）を削除して再読み込みするコマンド
+
+```
+Java: Clean the Java Language Server Workspace
+```
