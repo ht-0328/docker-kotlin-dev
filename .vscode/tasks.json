@@ -1,0 +1,72 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Gradle Build",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew build",
+            "detail": "プロジェクトをビルドして、成果物を生成します。"
+        },
+        {
+            "label": "Gradle Clean",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew clean",
+            "detail": "ビルド成果物やキャッシュをクリーンアップします。"
+        },
+        {
+            "label": "Gradle BootRun",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew bootRun",
+            "detail": "Spring Boot アプリケーションを起動します。"
+        },
+        {
+            "label": "Gradle Test",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew test",
+            "detail": "テストを実行し、結果をレポートします。"
+        },
+        {
+            "label": "Gradle Idea",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew idea  --no-configuration-cache",
+            "detail": "IDE（IntelliJ IDEA）用のプロジェクトファイルを生成します。"
+        },
+        {
+            "label": "Gradle Dependency",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew dependencies",
+            "detail": "プロジェクトの依存関係ツリーを表示します。"
+        },
+        {
+            "label": "Gradle Check",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew check",
+            "detail": "コードの検証を実行し、問題がないかをチェックします。"
+        },
+        {
+            "label": "Gradle Wrapper",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew wrapper",
+            "detail": "Gradleラッパーをインストールまたは更新します。"
+        },
+        {
+            "label": "Gradle Version",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew --version",
+            "detail": "現在使用しているGradleのバージョン情報を表示します。"
+        },
+        {
+            "label": "Gradle Dependency Lock",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew dependencies --write-locks",
+            "detail": "依存関係をロックして、gradle.lockfile を生成します。"
+        },
+        {
+            "label": "Gradle RUN",
+            "type": "shell",
+            "command": "cd /workspace/develop/demo_orika && ./gradlew run",
+            "detail": "アプリケーションを実行します。",
+            "problemMatcher": []
+        }
+    ]
+}
